@@ -48,6 +48,21 @@ namespace Project
 
         }
 
+        public List<Users> PopulateUsers()
+        {
+            List<Users> user = new List<Users>();
+            Filehandler fh = new Filehandler();
+
+            List<string> data = fh.ReadUsers();
+
+            foreach (string item in data)
+            {
+                string[] values = item.Split(':');
+                user.Add(values[0], values[1], values[2], values[3]);
+            }
+            return user;
+        }
+
         public override string ToString()
         {
             return string.Format("{0}:{1}:{2}:{3}", name, surname, username, password);
