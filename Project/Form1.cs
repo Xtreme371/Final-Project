@@ -162,6 +162,16 @@ namespace Project
             public void BtnStart_Click(object sender, EventArgs e)
         {
             // can't place objects in an entire row. If row if full there will be no routes to take
+            if (a0 == "X" && a1 == "X" && a2 == "X" && a3 == "X" && a4 == "X" && a5 == "X")
+            {
+                a0 = "-";
+                a1 = "-";
+                a2 = "-";
+                a3 = "-";
+                a4 = "-";
+                a5 = "-";
+                throw new NoRouteException("No routes were found with the current setting");//custom exception class
+            }
             if (b0 == "X" && b1 == "X" && b2 == "X" && b3 == "X" && b4 == "X" && b5 == "X")
             {
                 b0 = "-";
@@ -170,7 +180,7 @@ namespace Project
                 b3 = "-";
                 b4 = "-";
                 b5 = "-";
-                throw new NoRouteException("There are no possible routes");//requires custom exception class
+                throw new NoRouteException("No routes were found with the current setting");//requires custom exception class
             }
             else if (c0 == "X" && c1 == "X" && c2 == "X" && c3 == "X" && c4 == "X" && c5 == "X")
             {
@@ -180,7 +190,7 @@ namespace Project
                 c3 = "-";
                 c4 = "-";
                 c5 = "-";
-                throw new NoRouteException("There are no possible routes");
+                throw new NoRouteException("No routes were found with the current setting");
             }
             else if (d0 == "X" && d1 == "X" && d2 == "X" && d3 == "X" && d4 == "X" && d5 == "X")
             {
@@ -190,7 +200,7 @@ namespace Project
                 d3 = "-";
                 d4 = "-";
                 d5 = "-";
-                throw new NoRouteException("There are no possible routes");
+                throw new NoRouteException("No routes were found with the current setting");
             }
             else if (e0 == "X" && e1 == "X" && e2 == "X" && e3 == "X" && e4 == "X" && e5 == "X")
             {
@@ -200,7 +210,7 @@ namespace Project
                 e3 = "-";
                 e4 = "-";
                 e5 = "-";
-                throw new NoRouteException("There are no possible routes");
+                throw new NoRouteException("No routes were found with the current setting");
             }
             else
             {
