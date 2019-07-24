@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnemyTerritory));
             this.btnDone = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDone
             // 
-            this.btnDone.Location = new System.Drawing.Point(695, 399);
+            this.btnDone.Location = new System.Drawing.Point(529, 321);
             this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(93, 39);
+            this.btnDone.Size = new System.Drawing.Size(75, 23);
             this.btnDone.TabIndex = 0;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = true;
@@ -45,7 +46,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(607, 349);
             this.Controls.Add(this.btnDone);
             this.Name = "EnemyTerritory";
             this.Text = "EnemyTerritory";

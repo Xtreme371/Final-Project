@@ -8,3 +8,4 @@ D:\Git Cracken Repo\Final Project\Project\bin\Debug\Project.pdb
 D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.EnemyTerritory.resources
 D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.exe
 D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.pdb
+D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.Form1.resources

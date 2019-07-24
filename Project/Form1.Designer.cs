@@ -69,6 +69,7 @@
             this.button28 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
             this.grpbSimulation = new System.Windows.Forms.GroupBox();
+            this.lblScout = new System.Windows.Forms.Label();
             this.grpbObstacles.SuspendLayout();
             this.grpbSimulation.SuspendLayout();
             this.SuspendLayout();
@@ -471,6 +472,7 @@
             // grpbSimulation
             // 
             this.grpbSimulation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.grpbSimulation.Controls.Add(this.lblScout);
             this.grpbSimulation.Controls.Add(this.button29);
             this.grpbSimulation.Controls.Add(this.button28);
             this.grpbSimulation.Controls.Add(this.button27);
@@ -508,6 +510,15 @@
             this.grpbSimulation.TabIndex = 3;
             this.grpbSimulation.TabStop = false;
             this.grpbSimulation.Text = "Simulation";
+            // 
+            // lblScout
+            // 
+            this.lblScout.AutoSize = true;
+            this.lblScout.Location = new System.Drawing.Point(476, 305);
+            this.lblScout.Name = "lblScout";
+            this.lblScout.Size = new System.Drawing.Size(35, 13);
+            this.lblScout.TabIndex = 32;
+            this.lblScout.Text = "Scout";
             // 
             // Form1
             // 
@@ -571,6 +582,7 @@
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.GroupBox grpbSimulation;
+        private System.Windows.Forms.Label lblScout;
     }
 }
 

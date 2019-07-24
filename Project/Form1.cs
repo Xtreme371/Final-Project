@@ -131,6 +131,7 @@ namespace Project
         {
             grpbSimulation.SendToBack();
             lblScout.BringToFront();
+            
 
             string[][] matrix = new string[6][];        // jagged array
             matrix[0] = new string[6] {a0, a1, a2, a3, a4, a5 };
