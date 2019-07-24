@@ -367,21 +367,25 @@ namespace Project
         private void Button24_Click(object sender, EventArgs e)
         {
             e3 = "X";
+            button24.Hide();
         }
 
         private void Button27_Click(object sender, EventArgs e)
         {
             e4 = "X";
+            button27.Hide();
         }
 
         private void Button29_Click(object sender, EventArgs e)
         {
             e5 = "S";
+            button29.Hide();
         }
 
         private void Btn2_Click(object sender, EventArgs e)
         {
             a1 = "X";
+            btn2.Hide();
         }
 
 
