@@ -2,3 +2,9 @@ D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.csprojAssemblyRefere
 D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.Properties.Resources.resources
 D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
 D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+D:\Git Cracken Repo\Final Project\Project\bin\Debug\Project.exe.config
+D:\Git Cracken Repo\Final Project\Project\bin\Debug\Project.exe
+D:\Git Cracken Repo\Final Project\Project\bin\Debug\Project.pdb
+D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.EnemyTerritory.resources
+D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.exe
+D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.pdb
