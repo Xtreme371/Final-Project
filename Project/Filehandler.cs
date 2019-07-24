@@ -10,58 +10,69 @@ namespace Project
 {
     class Filehandler
     {
-        public static string userFile = "Users.txt";
+        FileStream stream;
+        StreamReader reader;
+        StreamWriter writer;
 
         // READ USERS FROM FILE
-        public List<Users> ReadUsers()
+        public List<string> ReadData(string filename)
         {
-            List<Users> users = new List<Users>();
-            StreamReader read = null;
-
+            List<string> rawData = new List<string>();
             try
             {
-                if (File.Exists(userFile))
+                stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
+                reader = new StreamReader(stream);
+                string line = string.Empty;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    FileStream inFile = new FileStream(userFile, FileMode.Open, FileAccess.Read);
-                    read = new StreamReader(inFile);
-                    string user = "";
-
-                    while (!read.EndOfStream)
-                    {
-                        user = read.ReadLine();
-                        string[] column = user.Split(':');
-                        users.Add(new Users(column[0], column[1], column[2], column[3]));
-                    }
-                }
-                else
-                {
-                    throw new FileNotFoundException("File not found");
+                    rawData.Add(line);
                 }
             }
-            catch (FileNotFoundException noFile)
+            catch (FileNotFoundException fnfe)
             {
-                MessageBox.Show(noFile.Message, "Missing file", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(fnfe.Message);
+            }
+            catch (DirectoryNotFoundException dnfe)
+            {
+                MessageBox.Show(dnfe.Message);
             }
             finally
             {
-                if (read != null)
-                {
-                    read.Close();
-                }
+                stream.Flush();
+                reader.Close();//Important
+                stream.Close();//Important
             }
-            return users;
+            return rawData;
         }
+
 
         // REGISTER NEW USER
-        public void WriteUsers(string userDetails)
+        public void WriteData(string fileName, string dataToWrite)
         {
-            FileStream outFile = new FileStream(userFile, FileMode.Append, FileAccess.Write);
-            StreamWriter write = new StreamWriter(outFile);
-
-            write.WriteLine(userDetails);
-
-            write.Close();
-            outFile.Close();
+            try
+            {
+                stream = new FileStream(fileName, FileMode.Append, FileAccess.Write);
+                writer = new StreamWriter(stream);
+                writer.WriteLine(dataToWrite);
+            }
+            catch (FileNotFoundException fnfe)
+            {
+                MessageBox.Show(fnfe.Message);
+            }
+            catch (DirectoryNotFoundException dnfe)
+            {
+                MessageBox.Show(dnfe.Message);
+            }
+            finally
+            {
+                writer.Close();//Important
+                stream.Close();//Important
+            }
         }
+
+
     }
 }
+
+    
+

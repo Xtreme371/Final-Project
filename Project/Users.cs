@@ -52,13 +52,12 @@ namespace Project
         {
             List<Users> user = new List<Users>();
             Filehandler fh = new Filehandler();
-
-            List<string> data = fh.ReadUsers();
+            List<string> data = fh.ReadData("Login.txt");
 
             foreach (string item in data)
             {
                 string[] values = item.Split(':');
-                user.Add(values[0], values[1], values[2], values[3]);
+                user.Add(new Users(values[0], values[1], values[2], values[3]));
             }
             return user;
         }
