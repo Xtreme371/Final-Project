@@ -50,17 +50,17 @@ namespace Project
 
         public List<Users> PopulateUsers()
         {
-            List<Users> userList = new List<Users>();
+            List<Users> user = new List<Users>();
             Filehandler fh = new Filehandler();
-            List<string> rawData = fh.ReadData("Login.txt");
 
-            foreach (string item in rawData)
+            List<string> data = fh.ReadUsers("Login.txt");
+
+            foreach (string item in data)
             {
-                string[] data = item.Split(';');
-                userList.Add(new Users(data[0], data[1],data[2],data[3]));
+                string[] values = item.Split(',');
+                user.Add(new Users(values[0], values[1], values[2], values[3]));
             }
-
-            return userList;
+            return user;
         }
 
         public override string ToString()

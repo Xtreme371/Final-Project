@@ -10,66 +10,76 @@ namespace Project
 {
     class Filehandler
     {
-        FileStream file;
+        FileStream stream;
         StreamReader reader;
         StreamWriter writer;
 
         // READ USERS FROM FILE
-        public List<string> ReadData(string filePath)
+        public List<string> ReadUsers(string fileName)
         {
-            List<string> rawData = new List<string>();
+            List<string> data = new List<string>();     
             try
             {
-                file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-                reader = new StreamReader(file);
+                stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                reader = new StreamReader(stream);
 
                 string line = string.Empty;
-
-                while ((line = reader.ReadLine()) != null)
+                while ((line=reader.ReadLine())!=null)
                 {
-                    rawData.Add(line);
+                    data.Add(line);
                 }
-            }
-            catch (DirectoryNotFoundException dnfe)
-            {
-                MessageBox.Show(dnfe.Message);
+
             }
             catch (FileNotFoundException fnfe)
             {
+
                 MessageBox.Show(fnfe.Message);
+            }
+            catch (DirectoryNotFoundException dnfe)
+            {
+
+                MessageBox.Show(dnfe.Message);
             }
             finally
             {
+                stream.Flush();
                 reader.Close();
-                file.Close();
+                stream.Close();
             }
-
-            return rawData;
+            return data;
+            // REGISTER NEW USER
+            
         }
-
-        // REGISTER NEW USER
-        public void WriteData(object obj, string filePath)
+        public List<string> WriteData(string fileName,string dataToWrite)
         {
+            List<string> writedata = new List<string>();
+
             try
             {
-                file = new FileStream(filePath, FileMode.Append, FileAccess.Write);
-                writer = new StreamWriter(file);
+                stream = new FileStream(fileName, FileMode.Append, FileAccess.Write);
+                writer = new StreamWriter(stream);
 
-                writer.WriteLine(obj);
-            }
-            catch (DirectoryNotFoundException dnfe)
-            {
-                MessageBox.Show(dnfe.Message);
+                foreach (var item in dataToWrite)
+                {
+                    writer.WriteLine(item);
+                }
             }
             catch (FileNotFoundException fnfe)
             {
                 MessageBox.Show(fnfe.Message);
             }
+            catch (DirectoryNotFoundException dnfe)
+            {
+
+                MessageBox.Show(dnfe.Message);
+            }
             finally
             {
+                writer.Flush();
                 writer.Close();
-                file.Close();
+                stream.Close();
             }
+            return writedata;
         }
     }
 }

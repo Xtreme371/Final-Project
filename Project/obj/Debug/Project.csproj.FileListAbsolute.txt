@@ -1,11 +1,6 @@
-D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
-D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.Properties.Resources.resources
-D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
-D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
-D:\Git Cracken Repo\Final Project\Project\bin\Debug\Project.exe.config
-D:\Git Cracken Repo\Final Project\Project\bin\Debug\Project.exe
-D:\Git Cracken Repo\Final Project\Project\bin\Debug\Project.pdb
-D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.EnemyTerritory.resources
-D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.exe
-D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.pdb
-D:\Git Cracken Repo\Final Project\Project\obj\Debug\Project.Form1.resources
+C:\Users\Pearl\Desktop\Final-Project-master (1)\Final-Project-master\Project\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\Pearl\Desktop\Final-Project-master (1)\Final-Project-master\Project\obj\Debug\Project.Login.resources
+C:\Users\Pearl\Desktop\Final-Project-master (1)\Final-Project-master\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\Pearl\Desktop\Final-Project-master (1)\Final-Project-master\Project\obj\Debug\Project.Registration.resources
+C:\Users\Pearl\Desktop\Final-Project-master (1)\Final-Project-master\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\Pearl\Desktop\Final-Project-master (1)\Final-Project-master\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
